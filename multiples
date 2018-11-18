@@ -1,0 +1,75 @@
+<html>
+
+	<head><title>List of Multiples</title></head>
+
+	<body>
+		<script type="text/javascript">
+
+			document.write('<br><p>Enter a number to calculate the multiples of.') 
+			
+			function mult(num){
+				var ans;
+				var i;	
+					document.write('<br><p>The first 20 multiples of ' + num + ' are:')
+					document.write('<table>' + '<tr>')
+					
+					for (i = 1; i < 21; i++) { 
+						ans = num * +i;
+						document.write( '<td>' + ans + '</td>');
+						if (i%4 == 0) {document.write('</tr>' + '<tr>');};
+					}
+				 document.write('</tr>' + '</table>')
+			};	
+			
+			function calc(){
+				var t = document.getElementById("target");
+				t.innerHTML = mult(document.getElementById('num').value);
+			}
+
+		</script>
+
+		
+<script type="text/javascript">
+
+//document.write('<br><p>Enter a word to write in reverse order.')
+
+// Basic functions
+
+function reverse(word){
+    var len;
+	var letter;
+	len = word.length;
+	//document.write(len)
+		for (i = len-1; i > -1; i--) { 
+			letter = word.slice(i,i+1);
+			document.write(letter);
+		}		
+		
+
+};
+
+function rev(){
+    var t = document.getElementById("target2");
+    t.innerHTML = reverse(document.getElementById('word').value);
+}
+</script>
+		
+		<p>
+			<form>
+				<input id="num" type="number" size="4">
+				<input type="button" value="check" onClick="calc();">
+			</form>
+		</p>	
+		<div id="target"></div>	
+<br><p>Enter a word to write in reverse order</br></p>
+		<p>
+			<form>
+				<input id="word" type="string" size="20">
+				<input type="button" value="check" onClick="rev();">
+			</form>
+		</p>	
+		<div id="target2"></div>	
+		
+	</body>
+
+</html>
