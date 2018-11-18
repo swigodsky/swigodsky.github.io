@@ -52,7 +52,7 @@ d3.csv('https://raw.githubusercontent.com/charleyferrari/CUNY_DATA_608/master/mo
 
 	
 
-	var pres = ['Washington', 'Lincoln', 'J. Adams', 'Madison', 'Bush'];
+	var pres = ['Washington', 'J. Adams', 'Madison', 'Jackson', 'Taylor', 'Lincoln', 'Hayes', 'Cleveland', 'Taft', 'Wilson', 'Hoover', 'F.D. Roosevelt', 'Truman', 'Eisenhower', 'Kennedy', 'Johnson', 'Nixon', 'Ford', 'Carter', 'Reagan','Bush', 'Clinton', 'GW Bush'];
     d3
     .select('#pres-selector')
     .selectAll('option')
